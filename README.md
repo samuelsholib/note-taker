@@ -1,2 +1,2 @@
 # note-taker
-this is going to be a note taker my style.
+This is going to be a note taker of my style.
