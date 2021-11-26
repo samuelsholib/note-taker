@@ -1,0 +1,23 @@
+{
+  "name": "note-taker",
+  "version": "1.0.0",
+  "description": "This is going to be a note taker of my style.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samuelsholib/note-taker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samuelsholib/note-taker/issues"
+  },
+  "homepage": "https://github.com/samuelsholib/note-taker#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jest": "^27.3.1"
+  }
+}
