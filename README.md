@@ -1,2 +1,2 @@
 # note-taker
-This is going to be a note taker of my style.
+It is a note taker built using node_js and express_js

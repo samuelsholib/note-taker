@@ -18,6 +18,7 @@
   "homepage": "https://github.com/samuelsholib/note-taker#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "jest": "^27.3.1"
+    "jest": "^27.3.1",
+    "uuid": "^8.3.2"
   }
 }
