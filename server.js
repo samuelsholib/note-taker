@@ -1,11 +1,12 @@
+const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const uuid = require('uuid');
-const express = require('express');
-const notes = require('./db/db.json');
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 5000;
+const notes = require("./db/db.json");
+const indexJs = require("./public/Assets/js/index")
 
 // Middleware
 app.use(express.urlencoded({ extended: true }));
@@ -14,7 +15,7 @@ app.use(express.static('public'));
 
 //setting routes for api
 app.get("/api/notes", (req, res) => {
-    res.sendFile(path.join(__dirname, "/db/db.json"))
+    res.sendFile(path.join(__dirname, "./db/db.json"))
 });
 
 // post functions to add new notes to db.json
@@ -34,14 +35,15 @@ app.delete("/api/notes/:id", (req, res) => {
     fs.writeFileSync("./db/db.json", JSON.stringify(deleteNote));
     res.json(deleteNote);
 });
-//CallS HTML files
+//Calls HTML files
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "/public/notes.html"));
+    res.sendFile(path.join(__dirname, "/public/index.html"));
 });
 app.get("/notes", (req, res) => {
-    res.sendFile(path.join(__dirname, "public/notes.html"))
+    res.sendFile(path.join(__dirname, "/public/notes.html"))
 });
 
 app.listen(PORT, () => {
-    console.log("app listening on" + PORT);
+    console.log("app listening on port" + PORT);
+
 });
